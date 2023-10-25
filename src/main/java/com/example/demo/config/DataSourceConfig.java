@@ -22,7 +22,7 @@ public class DataSourceConfig {
 //		return dataSource;
 //	}
 
-	// HikariCp DataSource
+	// HikariCp DataSource 2
 	@Bean
 	public HikariDataSource dataSource()
 	{
