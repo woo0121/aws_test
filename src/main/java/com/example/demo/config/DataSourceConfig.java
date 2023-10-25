@@ -28,7 +28,7 @@ public class DataSourceConfig {
 	{
 		HikariDataSource dataSource = new HikariDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		dataSource.setJdbcUrl("jdbc:mysql://3.35.40.9:3306/daeguyo");
+		dataSource.setJdbcUrl("jdbc:mysql://3.35.40.9:8080/daeguyo");
 		dataSource.setUsername("root");
 		dataSource.setPassword("Aws12345!");
 
