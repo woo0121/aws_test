@@ -46,7 +46,7 @@ public class UserController {
         model.addAttribute("orderHistoryCount", orderCount);
 
 
-        return "mypage";
+        return "myPage";
     }
 
 
