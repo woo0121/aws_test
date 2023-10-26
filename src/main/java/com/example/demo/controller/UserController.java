@@ -50,7 +50,7 @@ public class UserController {
     }
 
 
-
+// 1
 
     @GetMapping("/memberJoin")
     public void memberJoinPage(){
