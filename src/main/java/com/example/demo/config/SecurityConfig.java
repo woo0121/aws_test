@@ -38,12 +38,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 				.antMatchers("/", "/public","/verifyIamport2/getToken","/verifyIamport2/cancel","/verifyIamport2/searchOne","/index","/verifyIamport2/searchAll").permitAll()
 				.antMatchers("/payorder","/payment/save","/selectOptions","/updateOrder","/cartdelete").permitAll()
 				.antMatchers("/sms/send","/checkPhone","/sendEmail","/checkEmail").permitAll()
-				.antMatchers("/cart","/memberJoin","/menu_catagory","/myPage","/orderStatus","/review_tab","/selectRest","/memberUpdate","/login").permitAll()
+				.antMatchers("/memberJoin","/menu_catagory","/orderStatus","/review_tab","/selectRest","/memberUpdate","/login").permitAll()
 				.antMatchers("/resCheck","/orderCheck","/orderCheck1").permitAll()
 
 
 																				// hasRole을 사용시 기본적으로 Role_ 이 제공된다
-				.antMatchers("/user").hasRole("User")                            // Role_User
+				.antMatchers("/user","/myPage","/cart").hasRole("User")                            // Role_User
 				.antMatchers("/member").hasRole("Member")                        // Role_Member
 				.antMatchers("/admin").hasRole("Admin")                            // Role_Admin
 				.antMatchers("/deleteOrder/**").authenticated()
