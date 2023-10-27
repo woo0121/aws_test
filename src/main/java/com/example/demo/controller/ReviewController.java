@@ -37,9 +37,10 @@ public class ReviewController {
 //   getMenu 메서드 전체 다 복사 부탁드려욥.!!
     // import 부분들도 추가 부탁드립니도..!!
     public String getMenu(@RequestParam String res_id, Model model) {
+        log.info("res"+ res_id);
         ResDto res = resService.searchOne(res_id);
         model.addAttribute("res",res);
-        log.info("res"+ res);
+
         // 레스토랑 별점 출력 코드 추가
         int fullStars = (int) Math.floor(res.getRes_rating()); // 정수 앞자리 만큼의 꽉 찬 별
         int halfStars = (res.getRes_rating() - fullStars >= 0.5) ? 1 : 0; // 소숫점 은 반별로
